@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="sv-SE">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt</title>
+    <link rel="stylesheet" href="/main/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.3/simple-lightbox.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.3/simple-lightbox.css" integrity="sha512-5gTxhbmgsOKfPP2+TeKslkMmyxF0Cmyr2YrJrfaXD/ChLHavFXGzDDG9ZiOca1P/2/5nXuujkB2BWymVKu1pPg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
+</head>
+<body>
+    <nav>
+        <ul class="sidebar">
+            <li onclick=hideSidebar()><a><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26" fill="#000000"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+            <li><a href="/main/index.html">Hem</a></li>
+            <li><a href="/subpages/about.html">Om oss</a></li>
+            <li><a href="/subpages/services.html">Tjänster</a></li>
+            <li><a href="/subpages/contact.html" class="active">Kontakt</a></li>
+        </ul>
+        <ul>
+            <li><a href="/main/index.html">Norvegica</a></li>
+            <li class="hideOnMobile"><a href="/main/index.html">Hem</a></li>
+            <li class="hideOnMobile"><a href="/subpages/about.html">Om oss</a></li>
+            <li class="hideOnMobile"><a href="/subpages/services.html">Tjänster</a></li>
+            <li class="hideOnMobile active"><a href="/subpages/contact.html">Kontakt</a></li>
+            <li class="menu-button"  onclick=showSidebar()><a><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26" fill="#00000"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        </ul>
+    </nav>
+    <div class="padding-2"></div>
+    <div class="kontakt" id="kontakt">
+        <h2 class="kontakt-1">Kontakta oss</h2>
+        <h3 class="kontakt-2">Har du frågor eller funderingar? - Fyll i formuläret så återkommer vi till dig.</h3>
+        <section class="contact-form">
+            <h1 class="kontaktaoss">Kontakta oss</h1>
+            <form>
+                <div class="form-group">
+                    <label for="fname">Namn:</label>
+                    <input type="text" id="fname" name="firstname" required />
+                </div>
+                <div class="form-group">
+                    <label for="email">E-post:</label>
+                    <input type="email" id="email" name="email" required />
+                </div>
+                <div class="form-group">
+                    <label for="company">Företag:</label>
+                    <input type="text" id="company" name="company" required />
+                </div>
+                <div class="form-group">
+                    <label for="message">Meddelande:</label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        required
+                    ></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Skicka</button>
+                </div>
+            </form>
+        </section>
+    </div>
+</main>
+<footer id="footer">
+    <h1 class="övriga">Övriga kontaktuppgifter</h1>
+    <div class="övriga-uppgifter">
+        <h1 class="kontakt-norvegica">Kontakt Norvegica</h1>
+        <h2>Har du en allmän fråga till oss?</h2>
+        <h2>Telefon: 08 320 372</h2>
+        <h2>E-post: info@norvegica.com</h2>
+        <h2>Adress: Loremipsumvägen 150G</h2>
+    </div>
+    <script>
+        function showSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+        }
+        function hideSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
+        }
+    </script>
+</body>
+</html>
